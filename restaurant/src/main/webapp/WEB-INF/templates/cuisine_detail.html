@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${ title }"></title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+    <!-- //js -->
+    <!-- for bootstrap working -->
+    <script th:src="@{/js/bootstrap.js}"> </script>
+    <!-- //for bootstrap working -->
+
+	<link th:href="@{/css/detail.css}" rel="stylesheet" type="text/css" media="all" />
+</head>
+	
+<body>
+<!-- header -->
+	<div class="header" th:replace="fragment/header :: .header">
+	</div>
+<!-- //header -->
+<!-- single -->
+	<div class="single">
+	<div class="container">
+		<h3 th:text="${ name }">意粉套餐A</h3>
+		<div class="single-left">ss
+			<img th:src="@{/images/4.jpg}" alt=" " class="img-responsive" />
+		</div>
+		<div class="single-right">
+			<h4>超值</h4>
+			<p >shenme</p>
+		</div>
+		<div class="clearfix"> </div>
+		<div class="three-com">
+			<!--<h3>3  <span>on</span> <label>volutpat</label></h3>-->
+			<div class="tom-grid">
+				<div class="tom-right">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<form>
+									<fieldset>
+										<label class="control-label">选择数量</label>
+										<div class="form-group input-group">
+
+											<input id="colorful" class="form-control" type="number" value="1" min="1" max="10" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning" type="button">购买</button>
+                    </span>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	</div>
+<!-- //single -->
+<!--- footer --->
+	<div class="footer" th:include="fragment/footer :: .footer"></div>
+	<div class="clear"> </div>
+	<div class="copy-right">
+	</div>
+<!--- //footer --->
+
+</body>
+</html>
